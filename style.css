@@ -98,6 +98,6 @@ button {
     visibility: hidden; /* Oculto por padrão */
 }
   
-  /* .input.success .success-message {
-    visibility: visible; /* Exibir quando o campo input estiver na classe "success" 
-    }*/
+  .input.success .success-message {
+    visibility: visible; /* Exibir quando o campo input estiver na classe "success" */
+  }

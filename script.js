@@ -98,7 +98,6 @@ form.addEventListener("submit", (e) => {
         // Sem erros, mostra mensagem "Cadastro Realizado"
         alert("Cadastro Realizado!"); 
     }
-    form.reset();
 });
 
 
