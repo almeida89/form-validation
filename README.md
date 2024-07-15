@@ -13,6 +13,9 @@ Este projeto demonstra como criar uma validação de formulário usando HTML, CS
 - **CSS:** Estilização para melhorar a experiência do usuário.
 - **JavaScript:** Funções para validar os dados do formulário.
 
+## Visualização
+[Veja a página aqui]( https://form-validation-seven-opal.vercel.app/)
+
 ## Como Usar
 
 1. Clone o repositório:
