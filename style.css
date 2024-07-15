@@ -81,3 +81,23 @@ button {
     display: block;
     font-size: 16px;
 }
+
+.success-message {
+    display: block; /* Exibe como um bloco */
+    width: 100%; /* Largura total do elemento */
+    margin: 10px 0; /* Espaçamento em cima e em baixo */
+    padding: 10px; /* Espaço interno ao redor do conteúdo */
+    background-color: #d4edda; /* Verde claro */
+    color: #3c763d; /* Verde escuro */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #c6e6c6; /* Borda verde claro */
+    border-radius: 5px; /* Arredonda os cantos */
+    visibility: hidden; /* Oculto por padrão */
+}
+  
+  /* .input.success .success-message {
+    visibility: visible; /* Exibir quando o campo input estiver na classe "success" 
+    }*/

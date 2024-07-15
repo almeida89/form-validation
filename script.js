@@ -15,8 +15,19 @@ function showError(input, message) {
 
 // Show Sucess message
 function showSucess(input) {
-    const formControl = input.parentElement; //Obtém o elemento pai do input
-    formControl.classList.add("sucess"); // Adiciona a classe "sucess" ao pai para estilização
+    const formControl = input.parentElement;
+    formControl.classList.remove("error"); //Remove erro de estilos
+    formControl.classList.add("sucess"); // Adiciona classe de sucesso para estilo
+
+    //Obter ou criar o elemento da mensagem de sucesso
+    let sucessMessage = formControl.querySelector(".success-message");
+    if (!sucessMessage) {
+        sucessMessage = document.createElement("p");
+        sucessMessage.classList.add("sucess-message");
+        formControl.appendChild(sucessMessage);
+    }
+
+    sucessMessage.textContent = ""; //Define o texto da mensagem de sucess
 }
 
 // Check Required fields
@@ -74,5 +85,20 @@ form.addEventListener("submit", (e) => {
     checkLenghth(password, 8, 25);
     checkEmail(email);
     checkPasswordMatch(password,cPassword);
+
+    //Verifica se alguma função de validação retornou um erro.
+    let hasError = false;
+    [username, email, password, cPassword].forEach(input => {
+        if (input.parentElement.classList.contains("error")) {
+            hasError = true;
+        }
+    });
+
+    if (!hasError) {
+        // Sem erros, mostra mensagem "Cadastro Realizado"
+        alert("Cadastro Realizado!"); 
+    }
+    form.reset();
 });
+
 
